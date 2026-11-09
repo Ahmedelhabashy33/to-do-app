@@ -1,0 +1,46 @@
+<odoo>
+    <record id="todo_task_view_tree" model="ir.ui.view">
+        <field name="name">todo task tree</field>
+        <field name="model">todo.task</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name" />
+                <field name="assignee" />
+                <field name="duedata" />
+                <field name="status" />
+                 <field name="description"/>
+            </tree>
+        </field>
+    </record>
+
+     <record id="todo_task_view_form" model="ir.ui.view">
+        <field name="name">todo task form</field>
+        <field name="model">todo.task</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <group string="Genral Info">
+                             <field name="name"/>
+                             <field name="assignee"/>
+                        </group>
+                        <group string="Additional Info">
+                              <field name="status"/>
+                            <field name="duedata"/>
+                        </group>
+                        <group>
+                            <field name="description" />
+                        </group>
+                    </group>
+
+                </sheet>
+                <div class="oe_chatter">
+                    <field name="message_follower_ids"/>
+                    <field name="activity_ids"/>
+                    <field name="message_ids"/>
+                </div>
+            </form>
+        </field>
+        </record>
+
+</odoo>
