@@ -7,6 +7,7 @@
     'data': [
         'security/ir.model.access.csv',
         'views/todo_task_view.xml',
+        'views/users_view.xml',
         'views/base_menu.xml',
         ],
     'license': 'LGPL-3',

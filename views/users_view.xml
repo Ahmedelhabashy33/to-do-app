@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="users_view_simple_form_inherit_tasks" model="ir.ui.view">
+        <field name="name">users.simple.form.inherit.tasks</field>
+        <field name="model">res.users</field>
+        <field name="inherit_id" ref="base.view_users_simple_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//sheet" position="inside">
+                <separator string="Tasks"/>
+                    <field name="task_ids" nolabel="1">
+                        <tree>
+                            <field name="name"/>
+                            <field name="duedata"/>
+                            <field name="status"/>
+                        </tree>
+                    </field>
+            </xpath>
+        </field>
+    </record>
+
+</odoo>

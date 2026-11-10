@@ -19,6 +19,13 @@
         <field name="arch" type="xml">
             <form>
                 <sheet>
+                    <div name="button_box" class="oe_button_box">
+                         <button name="action_open_related_partner"
+                                type="object"
+                                icon="fa-user"
+                                string="Assignee"
+                                invisible="not id"/>
+                    </div>
                     <group>
                         <group string="Genral Info">
                              <field name="name"/>
